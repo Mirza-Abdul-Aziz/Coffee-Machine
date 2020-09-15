@@ -11,7 +11,7 @@ class CoffeeMachine:
         self.coffee_beans = coffee_beans
         self.disposeable_cups = disposeable_cups
         self.money = money
-    
+
     def buy(self):
         while True:
             choice = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:\n")
@@ -62,7 +62,7 @@ class CoffeeMachine:
                                     if self.disposeable_cups == 0:
                                         print("Sorry, not enough disposeable cups!")
                                         break
-            
+
                 else:
                     if choice == '3':
                         if self.water >= 200 and self.milk >= 100 and self.coffee_beans >= 12 and self.disposeable_cups != 0:
@@ -105,7 +105,7 @@ class CoffeeMachine:
         self.coffee_beans += update_coffee_beans
         #global disposeable_cups
         self.disposeable_cups += update_disposeable_cups
-    def take(self):    
+    def take(self):
         #global money
         print("I gave you $" + str(self.money))
         self.money = self.money * 0
@@ -116,7 +116,7 @@ class CoffeeMachine:
         print(self.coffee_beans, "of coffee beans")
         print(self.disposeable_cups, "of disposeable cups")
         print(self.money, "of money")
-    
+
     def action(self):
         while True:
             action = str(input("Write action (buy, fill, take, remaining, exit):\n"))
